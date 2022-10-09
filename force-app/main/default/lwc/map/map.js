@@ -2,7 +2,7 @@ import { LightningElement, api, track, wire } from 'lwc';
 import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
 
 export default class Map extends LightningElement {
-    //ShippingStreet, ShippingCity, ShippingState, ShippingPostalCode, ShippingCountry, ShippingLatitude, ShippingLongitude, ShippingGeocodeAccuracy, ShippingAddress
+
     @api recordId;
     @api objectApiName;
     @api streetApiName;
@@ -20,8 +20,8 @@ export default class Map extends LightningElement {
 
     // MAP
     mapOptions = {
-        'disableDefaultUI': true, // when true disables Map|Satellite, +|- zoom buttons
-        'draggable': false, // when false prevents panning by dragging on the map
+        'disableDefaultUI': true,
+        'draggable': false,
         'zoomControl': true,
         'scrollwheel': false,
         'disableDoubleClickZoom': false
