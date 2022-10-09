@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
-    <isExposed>false</isExposed>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="streetApiName" type="String" label="Street API Name" required="true" default="ShippingStreet"/>
+            <property name="cityApiName" type="String" label="City API Name" required="true" default="ShippingCity"/>
+            <property name="stateApiName" type="String" label="State API Name" required="true" default="ShippingState"/>
+            <property name="postalCodeApiName" type="String" label="Postal Code API Name" required="true" default="ShippingPostalCode"/>
+            <property name="countryApiName" type="String" label="Country API Name" required="true" default="ShippingCountry"/>
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
